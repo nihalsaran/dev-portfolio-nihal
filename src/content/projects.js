@@ -27,6 +27,7 @@ const projects = [
     img: "/jotion.jpg",
     preview: "#",
   },
+  
 ];
 
 //projects end

@@ -33,7 +33,7 @@ const Hero = (props) => {
           options={{
             strings: [
               "An Aspiring Developer",
-              "An AI & ML Enthusiast",
+              "An Mobile Dev Enthusiast",
               "An IoT Enthusiast",
               "A Student",
             ],
