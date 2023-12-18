@@ -9,7 +9,6 @@ const projects = [
     img: "/Home.jpeg",
     preview: "",
   },
-<<<<<<< HEAD
   {
     name: "Exo-Planet Predictor",
     description:
@@ -28,8 +27,6 @@ const projects = [
     img: "/group.jpeg",
     preview: "",
   },
-=======
->>>>>>> refs/remotes/origin/main
   
 ];
 
