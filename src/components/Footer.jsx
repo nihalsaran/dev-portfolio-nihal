@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="footer">
       <p>
         &copy; 2023. Made with ❤️ by{" "}
-        <a href="https://github.com/randilt">Nihal saran das duggirala</a>.
+        <a href="https://github.com/nihalsaran">Nihal saran das duggirala</a>.
       </p>
     </footer>
   );

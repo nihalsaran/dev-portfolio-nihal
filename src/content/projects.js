@@ -27,6 +27,33 @@ const projects = [
     img: "/group.jpeg",
     preview: "",
   },
+  {
+    name: "Legal-link-india",
+    description:
+      "Legal-Link-India e-Marketplace is a cutting-edge online platform revolutionizing the legal service industry in India. Our platform seamlessly connects individuals and businesses with a network of trusted legal professionals, including Advocates, Arbitrators, Mediators, Notaries, Document Writers, and more.",
+    stack: ["React", "MongoDB", "NodeJS", "ExpressJS", "Figma"],
+    sourceCode: "https://github.com/nihalsaran/Exoplanet-Prediction",
+    img: "/legallinkindia.png",
+    preview: "",
+  },
+  {
+    name: "Sales-Predictor Website",
+    description:
+      "A sales model which predicts the Sales forecast upon user/company data input",
+    stack: ["React", "MongoDB", "NodeJS", "ExpressJS", "Figma"],
+    sourceCode: "https://github.com/nihalsaran/Exoplanet-Prediction",
+    img: "/sales-graph.jpeg",
+    preview: "",
+  },
+  {
+    name: "Automatic-Indicator of Two-Wheeler",
+    description:
+      "An Mobile App which gives left or right indicator of the vehicle by using the accelerometer and gyroscope sensors of the mobile phone and also by using AI and ML models.",
+    stack: ["React", "MongoDB", "NodeJS", "ExpressJS", "Figma"],
+    sourceCode: "https://github.com/nihalsaran/Exoplanet-Prediction",
+    img: "/group.jpeg",
+    preview: "",
+  },
   
 ];
 
