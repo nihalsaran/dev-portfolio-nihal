@@ -5,5 +5,4 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: "/dev-portfolio-nihal/",
   plugins: [react()],
-  assetsInclude: /\.(png|jpe?g|gif|svg)$/i,
 })
