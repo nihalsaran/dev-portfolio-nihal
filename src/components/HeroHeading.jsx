@@ -1,11 +1,10 @@
 const HeroHeading = () => {
   const typedSpan = document.getElementById("typed");
   const totype = [
-    "A Tech Enthusiast",
-    "A Gamer",
-    "AI & ML Enthusiast",
-    "A Web Developer",
-    "A Programmer",
+    "An Aspiring Web/App Developer",
+    "An Mobile Dev Enthusiast",
+    "An IoT Enthusiast",
+    "A Mechanical Engineering Student Specialized in Computer Science",
   ];
 
   const delayTyping_char = 100;

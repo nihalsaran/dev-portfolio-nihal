@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import ProjectCard from "./components/ProjectCard";
 import Heading from "./components/Heading";
 import projects from "./content/projects";
+import ExperienceTimeline from "./components/ExperienceTimeline";
+import experience from "./content/experience";
 import Skill from "./components/Skill";
 import skills from "./content/skills";
 import { motion, useAnimation } from "framer-motion";
@@ -16,8 +18,26 @@ import ContactForm from "./components/ContactForm";
 import BlogPost from "./components/BlogPost";
 
 function App() {
+  const projectControls = useAnimation();
+  const [projectRef, projectInView] = useInView({ triggerOnce: true });
+
+  const timelineControls = useAnimation();
+  const [timelineRef, timelineInView] = useInView({ triggerOnce: true });
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true });
+
+  useEffect(() => {
+    if (projectInView) {
+      projectControls.start("visible");
+    }
+  }, [projectControls, projectInView]);
+
+  useEffect(() => {
+    if (timelineInView) {
+      timelineControls.start("visible");
+    }
+  }, [timelineControls, timelineInView]);
+
 
   useEffect(() => {
     if (inView) {
@@ -74,6 +94,20 @@ function App() {
           ))}
         </motion.div>
       </section>
+     
+      <section id="experience">
+  <Heading firstWord="Work" secondWord="Experience" />
+  <motion.div
+    className="experience-timeline"
+    ref={ref} 
+    initial="hidden"
+    animate={controls}
+    variants={containerVariants}
+  >
+    <ExperienceTimeline experiences={experience} />
+  </motion.div>
+</section>
+
       <section id="skills">
         <Heading firstWord="Skills" secondWord="&Tools" />
         <motion.div
