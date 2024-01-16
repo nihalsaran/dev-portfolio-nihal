@@ -2,7 +2,7 @@
 import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import "/Users/nihalsarandasduggirala/Desktop/react-dev-portfolio-main/src/App.css"; // Import the new CSS file
+import "/Users/nihalsarandasduggirala/Desktop/react-dev-portfolio-main/src/ExperienceTimeline.css"; // Import the new CSS file
 
 const ExperienceTimeline = ({ experiences }) => {
   return (

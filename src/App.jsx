@@ -94,19 +94,20 @@ function App() {
           ))}
         </motion.div>
       </section>
-     
+
       <section id="experience">
-  <Heading firstWord="Work" secondWord="Experience" />
-  <motion.div
-    className="experience-timeline"
-    ref={ref} 
-    initial="hidden"
-    animate={controls}
-    variants={containerVariants}
-  >
-    <ExperienceTimeline experiences={experience} />
-  </motion.div>
-</section>
+        <Heading firstWord="Work" secondWord="Experience" />
+        <motion.div
+          className="experience-timeline"
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={containerVariants}
+        >
+          {/* Use the updated ExperienceTimeline component */}
+          <ExperienceTimeline experiences={experience} />
+        </motion.div>
+      </section>
 
       <section id="skills">
         <Heading firstWord="Skills" secondWord="&Tools" />
@@ -124,7 +125,7 @@ function App() {
           ))}
         </motion.div>
       </section>
-      
+
       <section id="contact">
         <Heading firstWord="Contact" secondWord="Me" />
         <ContactForm />
