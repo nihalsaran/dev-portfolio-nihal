@@ -19,7 +19,8 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      await axios.post("/.netlify/functions/submitForm", formData);
+      // Replace 'https://your-glitch-app-url.glitch.me' with your Glitch app URL
+      await axios.post("https://pushy-catkin-alto.glitch.me/send-email", formData);
       alert("Message sent successfully!");
     } catch (error) {
       console.error("Error submitting form:", error);
