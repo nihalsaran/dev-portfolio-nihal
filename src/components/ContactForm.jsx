@@ -1,58 +1,78 @@
-import socials from "../content/socials";
-import { MdEmail } from "react-icons/md";
-import { FaPhoneAlt } from "react-icons/fa";
-import { IoLocation } from "react-icons/io5";
+// ContactForm.js
+
+import React, { useState } from "react";
+import axios from "axios";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    senderName: "",
+    senderEmail: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await axios.post("/.netlify/functions/submitForm", formData);
+      alert("Message sent successfully!");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Error sending message. Please try again later.");
+    }
+  };
+
   return (
     <div className="contact-section">
       <div className="contact-info">
-        <h1>Let&apos;s talk about everything!</h1>
+        <h1>Let's talk about everything!</h1>
         <p>
-          Don&apos;t like forms? Send me an{" "}
+          Don't like forms? Send me an{" "}
           <a href="mailto:nihalsarandasd@gmail.com">email</a>. 👋
           <br />
           <br />
           <h3>Or find me on:</h3>
-          <div className="hero-socials">
-            {socials.map((social, index) => (
-              <a key={index} href={social.url}>
-                <img src={`/socials/${social.icon}`} alt="" />
-              </a>
-            ))}
-          </div>
+          {/* Your social media icons here */}
         </p>
         <div>
           <p className="contact-links">
-            <MdEmail />
-            nihalsarandasd@gmail.com
-          </p>
-          <br />
-          <p className="contact-links">
-            <FaPhoneAlt />
-            +91 6309596999
-          </p>
-          <br />
-          <p className="contact-links">
-            <IoLocation />
-            India
+            {/* Your contact information here */}
           </p>
           <br />
         </div>
       </div>
       <div className="contact-form">
-        <form name="contact" netlify>
+        <form name="contact" onSubmit={handleSubmit}>
           <input
             type="text"
             name="senderName"
             placeholder="Your Name"
+            onChange={handleChange}
             required
           />
-          <input type="text" name="senderEmail" placeholder="Email" required />
-          <input type="text" name="subject" placeholder="Subject" required />
+          <input
+            type="text"
+            name="senderEmail"
+            placeholder="Email"
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            onChange={handleChange}
+            required
+          />
           <textarea
             placeholder="Your Message"
             name="message"
+            onChange={handleChange}
             required
           ></textarea>
           <input type="submit" value="Send" />
