@@ -27,21 +27,21 @@ const experience = [
         company: "Casper's Home",
         startDate: "Mar 2023",
         endDate: "May 2023",
-        description: "Developed user interfaces for client projects using React.js and other modern technologies.",
+        description: "Managed Social Media accounts and edited videos for the company.",
       },
       {
         jobTitle: "Fridays for Future India",
         company: "Casper's Home",
         startDate: " Dec 2022 ",
         endDate: "May 2023",
-        description: "Developed user interfaces for client projects using React.js and other modern technologies.",
+        description: "Managed Social Media accounts and edited videos for the company.",
       },
       {
         jobTitle: "Trainee",
         company: "Acolite Digital",
         startDate: "June 2022",
         endDate: "July 2022",
-        description: "Developed user interfaces for client projects using React.js and other modern technologies.",
+        description: "Worked on various web development projects and collaborated with cross-functional teams.",
       },
     // Add more experiences as needed
   ];
