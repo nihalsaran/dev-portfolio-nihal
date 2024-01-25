@@ -54,6 +54,15 @@ const projects = [
     img: "/group.jpeg",
     preview: "",
   },
+  {
+    name: "College-Website-Responsive",
+    description:
+      "College Website which is responsive and can be used by any college or school",
+    stack: ["React", "Firebase","Figma"],
+    sourceCode: "https://github.com/pri007shu/DEIpagedetd",
+    img: "/group.jpeg",
+    preview: "https://pri007shu.github.io/DEIpagedetd/",
+  },
   
 ];
 
