@@ -1,31 +1,26 @@
 // ContactForm.js
 
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { MdEmail } from "react-icons/md";
+import socials from "../content/socials";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoLocation } from "react-icons/io5";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    senderName: "",
-    senderEmail: "",
-    subject: "",
-    message: "",
-  });
+  const form = useRef();
+  const [showMessage, setShowMessage] = useState(false);
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    try {
-      // Replace 'https://your-glitch-app-url.glitch.me' with your Glitch app URL
-      await axios.post("https://pushy-catkin-alto.glitch.me/send-email", formData);
-      alert("Message sent successfully!");
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Error sending message. Please try again later.");
-    }
+    emailjs.sendForm('service_kcxl51w', 'template_ritdir8', form.current, 'Xq3lTclAhu8nF54qE')
+      .then((result) => {
+        console.log(result.text);
+        setShowMessage(true); // Set showMessage to true after successful submission
+      }, (error) => {
+        console.log(error.text);
+      });
   };
 
   return (
@@ -33,51 +28,52 @@ const ContactForm = () => {
       <div className="contact-info">
         <h1>Let's talk about everything!</h1>
         <p>
-          Don't like forms? Send me an{" "}
-          <a href="mailto:nihalsarandasd@gmail.com">email</a>. 👋
+          Don't like forms? Send me an{' '}
+          <a href="mailto:nihalsarandasd@gmail.com">Mail</a>. 👋
           <br />
           <br />
           <h3>Or find me on:</h3>
-          {/* Your social media icons here */}
+          <div className="hero-socials">
+            {socials.map((social, index) => (
+              <a key={index} href={social.url}>
+                <img src={`/socials/${social.icon}`} alt="" />
+              </a>
+            ))}
+          </div>
+          {}
+          
         </p>
         <div>
           <p className="contact-links">
-            {/* Your contact information here */}
+          <MdEmail />
+            nihalsarandasd@gmail.com
+          </p>
+          <br />
+          <p className="contact-links">
+            <FaPhoneAlt />
+            +91 6309596999
+          </p>
+          <br />
+          <p className="contact-links">
+            <IoLocation />
+            India
           </p>
           <br />
         </div>
       </div>
       <div className="contact-form">
-        <form name="contact" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="senderName"
-            placeholder="Your Name"
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="text"
-            name="senderEmail"
-            placeholder="Email"
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            onChange={handleChange}
-            required
-          />
-          <textarea
-            placeholder="Your Message"
-            name="message"
-            onChange={handleChange}
-            required
-          ></textarea>
+        <form ref={form} onSubmit={sendEmail}>
+          <label>Name</label>
+          <input type="text" name="user_name" />
+          <label>Email</label>
+          <input type="email" name="user_email" />
+          <label>Message</label>
+          <textarea name="message" />
           <input type="submit" value="Send" />
+
+          {showMessage && <p>Thanks for contacting!</p>}
         </form>
+        
       </div>
     </div>
   );

@@ -13,9 +13,11 @@
   },
   "dependencies": {
     "@babel/core": "^7.23.7",
+    "@emailjs/browser": "^3.12.1",
     "axios": "^1.6.5",
     "body-parser": "^1.20.2",
     "dotenv": "^16.3.2",
+    "emailjs-com": "^3.2.0",
     "express": "^4.18.2",
     "framer-motion": "^10.16.14",
     "jquery": "^3.7.1",
