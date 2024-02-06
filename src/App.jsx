@@ -16,6 +16,8 @@ import { useEffect } from "react";
 import blogPosts from "./content/blogPosts";
 import ContactForm from "./components/ContactForm";
 import BlogPost from "./components/BlogPost";
+import ParticleAnimation from "./components/ParticleAnimation";
+
 
 function App() {
   const projectControls = useAnimation();
@@ -61,16 +63,18 @@ function App() {
 
   return (
     <>
+     <ParticleAnimation />
       <Navbar
         firstName={information.userData.firstName}
         lastName={information.userData.lastName}
       />
+      
       <Hero
         img={information.userData.img}
         description={information.userData.description}
         title={information.userData.title}
       />
-      <div className="hr"></div>
+     
 
       <section id="projects">
         <Heading firstWord="My" secondWord="Projects" />

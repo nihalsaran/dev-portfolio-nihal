@@ -16,6 +16,9 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -159,6 +162,7 @@ nav {
   font-family: "Share Tech Mono", monospace;
   flex-direction: column;
   justify-content: center;
+  z-index: 1;
 
   margin-top: 50px;
 }
@@ -217,9 +221,16 @@ footer {
 .heading h1 {
   font-size: 50px;
   text-align: center;
+  z-index: 1;
 }
 .heading h1 span {
   color: #fa3939;
+}
+
+.iam{
+  font-size: 50px;
+  text-align: center;
+  z-index: 1;
 }
 @media (max-width: 768px) {
   .heading h1 {
@@ -592,13 +603,17 @@ form > input[type="submit"]:hover {
   margin-top: 30px;
   gap: 10px;
   font-size: 40px;
+  z-index: 1;
 }
 .typewriter-wrapper span {
   color: #fa3939;
+  z-index: 1;
 }
 .Typewriter__wrapper {
   color: #fa3939;
   font-weight: 700;
+  z-index: 1;
+  position: relative;
 }
 @media (max-width: 768px) {
   .Typewriter__wrapper,
@@ -607,6 +622,6 @@ form > input[type="submit"]:hover {
   }
 }
 
-/* components/ExperienceTimeline.css */
+
 
 
