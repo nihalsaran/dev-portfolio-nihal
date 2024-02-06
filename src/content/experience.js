@@ -3,7 +3,7 @@
 const experience = [
     {
       jobTitle: "Web Developer",
-      company: "MHRD Virtual-Labs",
+      company: "MoE-NMEICT Virtual-Labs",
       startDate: "January 2022",
       endDate: "Present",
       description: "Worked on various web development projects and collaborated with cross-functional teams.",
