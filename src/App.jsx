@@ -17,6 +17,7 @@ import blogPosts from "./content/blogPosts";
 import ContactForm from "./components/ContactForm";
 import BlogPost from "./components/BlogPost";
 import ParticleAnimation from "./components/ParticleAnimation";
+import Resume from "./components/Resume";
 
 
 function App() {
@@ -130,6 +131,8 @@ function App() {
         </motion.div>
       </section>
 
+       {/* Section for Resume */}
+      
       <section id="contact">
         <Heading firstWord="Contact" secondWord="Me" />
         <ContactForm />
