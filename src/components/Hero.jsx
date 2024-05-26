@@ -66,7 +66,7 @@ const Hero = (props) => {
         <div className="hero-socials">
           {socials.map((social, index) => (
             <a key={index} href={social.url}>
-              <img src={`/socials/${social.icon}`} alt="" />
+              <img src={`/dev-portfolio-nihal/socials/${social.icon}`} alt="" />
             </a>
           ))}
         </div>
