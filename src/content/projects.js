@@ -6,7 +6,7 @@ const projects = [
       "An App which facilitates Study materials and other imp resources of a particular college to their students ",
     stack: ["React-native", "Firebase", "Ant-design", "Figma"],
     sourceCode: "https://github.com/nihalsaran/Learnify",
-    img: "/Home.jpeg",
+    img: "/dev-portfolio-nihal/Home.jpeg",
     preview: "",
   },
   {
@@ -15,7 +15,7 @@ const projects = [
       "Developed a robust machine learning model to predict the habitability of exoplanets based on a diverse set of features, including mass, radius, and orbital characteristics",
     stack: ["React", "Restful API", "Flask", "Figma", "ML/AI"],
     sourceCode: "https://github.com/SajalSatsangi/Exoplanet-Prediction",
-    img: "/Homescreen.jpeg",
+    img: "/dev-portfolio-nihal/Homescreen.jpeg",
     preview: "",
   },
   {
